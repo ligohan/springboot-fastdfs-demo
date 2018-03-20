@@ -10,8 +10,9 @@
 
 ## 系统要点入口（必须）
 
-- Index：<http://www.baidu.com>
-- Swagger UI：<http://www.baidu.com>
+- Index：<http://127.0.0.1:9090/springboot-simple-demo>
+- Login：<http://127.0.0.1:9090/springboot-simple-demo/login>
+- Swagger UI：<http://127.0.0.1:9090/springboot-simple-demo/swagger-ui.html>
 
 ## 技术选型
 
@@ -37,7 +38,7 @@
 - 必备操作：
 	- 初始化数据库：`/项目根目录/doc/db/表结构和数据.sql`
 	- Maven 测试：`clean package`
-- IntelliJ IDEA 操作如下图 Gif 演示
+- IntelliJ IDEA 操作如图 Gif 演示：[点击我查看 Gif](doc/images/demo.gif)
 - 觉得 Gif 动态图片操作过快，需要暂停 Gif 图片进行观看的话，可以使用这个 Gif 图片查看工具：[7GIF（提取密码：0qo9）](https://pan.baidu.com/s/1mkrESsg)
 
 
