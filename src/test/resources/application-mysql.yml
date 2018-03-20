@@ -1,0 +1,41 @@
+#=================================================================================
+
+spring:
+  datasource: 
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/springboot_demo?rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf-8&characterSetResults=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false
+    username: root
+    password: 123456
+    druid:
+      initial-size: 3
+      min-idle: 3
+      max-active: 10
+      max-wait: 60000
+      validation-query: SELECT 1
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      use-global-data-source-stat: true
+      min-evictable-idle-time-millis: 300000
+      time-between-eviction-runs-millis: 60000
+      max-open-prepared-statements: 20
+      max-pool-prepared-statement-per-connection-size: 20
+      slf4j:
+        enabled: true
+      wall:
+        enabled: true
+      web-stat:
+        enabled: true
+        url-patterns: '/*'
+        exclusions: '*.gif,*.jpg,*.jpeg,*.png,*.bmp,*.swf,*.ico,*.woff,*.woff2,*.ttf,*.eot,*.js,*.css,*.html,*.htm,/druid/*'
+      stat-view-servlet:
+        enabled: true
+        url-mappings: '/druid/*'
+        allow: 127.0.0.1
+        deny: 192.168.2.1
+        login-username: admin
+        login-password: 123456
+        reset-enable: false
+
+#=================================================================================
