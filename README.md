@@ -6,4 +6,4 @@
 
 ## 目录
 1. [安装和部署](markdown-file/1.安装和部署.md)
-2. [FastDFS与Springboot集成](markdown-file/2.FastDFS与Springboot集成.md)
+2. [FastDFS与SpringBoot集成](markdown-file/2.FastDFS与SpringBoot集成.md)
