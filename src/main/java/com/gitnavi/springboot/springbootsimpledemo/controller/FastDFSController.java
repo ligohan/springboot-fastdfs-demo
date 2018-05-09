@@ -35,6 +35,5 @@ public class FastDFSController {
         String fileUrl = dfsClient.uploadFile(file);
         map.put("file_url", fileUrl);
         return ResponseEntity.ok(map);
-
     }
 }
