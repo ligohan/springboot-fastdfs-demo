@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gitnavi.springboot</groupId>
-    <artifactId>springboot-simple-demo</artifactId>
+    <artifactId>springboot-fastdfs-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -41,22 +41,22 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        
+
         <lombok.version>1.16.18</lombok.version>
         <disruptor.version>3.3.4</disruptor.version>
-        
+
         <HikariCP.version>2.7.2</HikariCP.version>
         <springfox-swagger2.version>2.6.1</springfox-swagger2.version>
-        
+
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <mybatisplus.version>2.1.4</mybatisplus.version>
         <fastdfs.version>1.26.2</fastdfs.version>
         <druid.version>1.1.5</druid.version>
         <druid-spring-boot-starter.version>1.1.1</druid-spring-boot-starter.version>
-        
+
         <thymeleaf.version>3.0.8.RELEASE</thymeleaf.version>
         <thymeleaf-layout-dialect.version>2.2.2</thymeleaf-layout-dialect.version>
-        
+
         <commons-lang3.version>3.6</commons-lang3.version>
         <guava.version>23.0</guava.version>
     </properties>
@@ -68,7 +68,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
@@ -203,6 +203,12 @@
             <groupId>com.github.tobato</groupId>
             <artifactId>fastdfs-client</artifactId>
             <version>${fastdfs.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>ch.qos.logback</groupId>
+                    <artifactId>logback-classic</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!--fastdfs 依赖 end-->
 

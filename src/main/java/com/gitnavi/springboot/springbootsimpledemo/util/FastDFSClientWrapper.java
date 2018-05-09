@@ -4,10 +4,9 @@ import com.github.tobato.fastdfs.domain.StorePath;
 import com.github.tobato.fastdfs.exception.FdfsUnsupportStorePathException;
 import com.github.tobato.fastdfs.service.FastFileStorageClient;
 import com.gitnavi.springboot.springbootsimpledemo.common.FastDFSConstants;
+import lombok.extern.log4j.Log4j2;
 import org.apache.commons.io.FilenameUtils;
 import org.apache.commons.lang3.StringUtils;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
@@ -20,9 +19,8 @@ import java.nio.charset.Charset;
  * Description: FastDFS文件上传下载包装类
  */
 @Component
+@Log4j2
 public class FastDFSClientWrapper {
-
-    private final Logger logger = LoggerFactory.getLogger(FastDFSClientWrapper.class);
 
     @Autowired
     private FastFileStorageClient storageClient;
@@ -70,7 +68,7 @@ public class FastDFSClientWrapper {
             StorePath storePath = StorePath.praseFromUrl(fileUrl);
             storageClient.deleteFile(storePath.getGroup(), storePath.getPath());
         } catch (FdfsUnsupportStorePathException e) {
-            logger.warn(e.getMessage());
+            log.warn(e.getMessage());
         }
     }
 
