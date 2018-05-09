@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.gitnavi.springboot</groupId>
-    <artifactId>springboot-simple-demo</artifactId>
+    <artifactId>springboot-fastdfs-demo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
@@ -50,6 +50,7 @@
         
         <mybatisplus-spring-boot-starter.version>1.0.5</mybatisplus-spring-boot-starter.version>
         <mybatisplus.version>2.1.4</mybatisplus.version>
+        <fastdfs.version>1.26.2</fastdfs.version>
         <druid.version>1.1.5</druid.version>
         <druid-spring-boot-starter.version>1.1.1</druid-spring-boot-starter.version>
         
@@ -188,7 +189,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-log4j2</artifactId>
         </dependency>
-        
+
         <!--log4j2 异步需要该依赖-->
         <dependency>
             <groupId>com.lmax</groupId>
@@ -196,6 +197,14 @@
             <version>${disruptor.version}</version>
         </dependency>
         <!--采用 log4j2 end-->
+
+        <!--fastdfs 依赖 start-->
+        <dependency>
+            <groupId>com.github.tobato</groupId>
+            <artifactId>fastdfs-client</artifactId>
+            <version>${fastdfs.version}</version>
+        </dependency>
+        <!--fastdfs 依赖 end-->
 
         <dependency>
             <groupId>org.projectlombok</groupId>

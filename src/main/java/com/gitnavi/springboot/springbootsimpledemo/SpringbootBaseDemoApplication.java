@@ -1,17 +1,20 @@
 package com.gitnavi.springboot.springbootsimpledemo;
 
+import com.github.tobato.fastdfs.FdfsClientConfig;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.context.annotation.Import;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 
 @ServletComponentScan
 @EnableTransactionManagement
 @Log4j2
+@Import(FdfsClientConfig.class)
 @SpringBootApplication
 public class SpringbootBaseDemoApplication implements CommandLineRunner {
 

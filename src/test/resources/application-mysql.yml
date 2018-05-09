@@ -4,7 +4,7 @@ spring:
   datasource: 
     driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://127.0.0.1:3306/springboot_demo?rewriteBatchedStatements=true&useUnicode=true&characterEncoding=utf-8&characterSetResults=UTF-8&autoReconnect=true&allowMultiQueries=true&useSSL=false
-    username: root
+    username: test
     password: 123456
     druid:
       initial-size: 3
